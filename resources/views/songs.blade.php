@@ -40,7 +40,7 @@
                 <a href="https://github.com/franciscocorrales/hangarcr-recruitment">https://github.com/franciscocorrales/hangarcr-recruitment</a>
                 
                 <div>
-					@if( count($songs) )
+					@if( null != $songs  &&  count($songs) )
 						<h1>Songs currently on the API:</h1>
 						<ul>
 							@foreach($songs as $song)
