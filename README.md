@@ -3,7 +3,28 @@
 #Laravel Test - RESTful API#
 
 ##How to use it:##
+
 Server URL: 
+
+
+###Actions Handled###
+
+Verb	Path	Action	Route Name
+GET	/photo	index	photo.index
+GET	/photo/create	create	photo.create
+POST	/photo	store	photo.store
+GET	/photo/{photo}	show	photo.show
+GET	/photo/{photo}/edit	edit	photo.edit
+PUT/PATCH	/photo/{photo}	update	photo.update
+DELETE	/photo/{photo}	destroy	photo.destroy
+
+Remember, since HTML forms can't make PUT, PATCH, or DELETE requests, you will need to add a hidden _method field to spoof these HTTP verbs:
+
+<input type="hidden" name="_method" value="PUT">
+
+
+
+
 
 
 
@@ -20,4 +41,4 @@ Server URL:
 ##References:##
  * https://devcenter.heroku.com/articles/getting-started-with-laravel
  * https://laracasts.com/series/laravel-5-fundamentals/
- 
+ * https://laravel.com/docs/5.2/controllers#restful-resource-controllers 
