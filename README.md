@@ -2,7 +2,7 @@
 
 #Laravel Test - RESTful API#
 
-##How to try it:##
+##How to use it:##
 Server URL: 
 
 
