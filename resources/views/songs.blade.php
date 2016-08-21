@@ -44,7 +44,7 @@
 						<h1>Songs currently on the API:</h1>
 						<ul>
 							@foreach($songs as $song)
-								<li>{{$song}}</li>
+								<li>{{ print_r($song)}}</li>
 							@endforeach
 						</ul>
 					@endif
