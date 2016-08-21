@@ -8,7 +8,7 @@ Server URL:
 
 
 ##Time:##
- * Setup (Heroku, Laravel, Local)   - 3 hours
+ * Setup (Heroku, Laravel, Repository, Local)   - 3 hours
  * RESTful API
   * CRUD - 0  hours
   * Auth - 0  hours
