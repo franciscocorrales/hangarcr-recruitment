@@ -31,11 +31,12 @@
                 font-size: 40px;
                 margin: 20px;
             }
-            h1{
+            h2{
 				font-weight: normal;
 			}
             .songs{
 				text-align: left;
+				margin-top: 50px;
 			}
 			
 			.songs label, .songs p{
@@ -44,6 +45,7 @@
 			
 			.songs p{
 				margin: 0;
+				color: grey;
 			}
 			
 			.songs label {
@@ -52,11 +54,14 @@
 			
 			.songs .song{
 				margin-bottom: 35px;
-				border-bottom: 1px black solid;
+				border: 1px lightgrey solid;
+				padding: 10px;
+				border-radius: 8px;
 			}
 			
 			.preview{
 				text-align: center;
+				margin-top: 10px;
 			}
         </style>
     </head>
@@ -69,7 +74,7 @@
                 
                 <div class="songs">
 					@if( null != $songs  &&  count($songs) )
-						<h1>Songs currently on the API:</h1>
+						<h2>Songs currently on the API:</h2>
 						
 						@foreach($songs as $song)
 							<div class="song">
