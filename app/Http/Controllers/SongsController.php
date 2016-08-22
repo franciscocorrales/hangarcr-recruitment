@@ -9,47 +9,7 @@ use App\Song;
 
 
 class SongsController extends Controller
-{
-	
-	public function getJSONSongs(){
-		return array(
-		
-			array(
-			'id' => 8815586,
-            'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
-            'songname' => 'twist and shout',
-            'artistid' => 1833,
-            'artistname' => 'beatles',
-            'albumid' => 5619520,
-            'albumname' => 'beatles'
-			),
-			
-			array(
-			'id' => 8815587,
-            'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
-            'songname' => 'i saw her standing there',
-            'artistid' => 1833,
-            'artistname' => 'beatles',
-            'albumid' => 5619520,
-            'albumname' => 'beatles'
-			)
-			,
-			
-			array(
-			'id' => 8815587,
-            'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
-            'songname' => 'i saw her standing there',
-            'artistid' => 1833,
-            'artistname' => 'beatles',
-            'albumid' => 5619520,
-            'albumname' => 'beatles'
-			)
-			
-		
-		);
-	}
-	
-	
+{	
     /**
      * Display a listing of the resource.
      *
@@ -61,22 +21,17 @@ class SongsController extends Controller
         return view('songs', compact('songs'));
     }
     
-    public function songs()
-    {
-		$songs = Song::all();
-        return view('songs', compact('songs'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
+    public function all(){
+		
+		$data = Song:all();
+		
+		return Response::json(
+			array(
+				'success'=>true,
+				'songs'= $data->toArray()
+		));
+	}
+        
     /**
      * Store a newly created resource in storage.
      *
@@ -95,17 +50,6 @@ class SongsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
     {
         //
     }

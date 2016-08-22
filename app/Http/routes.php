@@ -12,4 +12,9 @@
 */
 
 Route::get('/', 'SongsController@index');
-Route::get('songs', 'SongsController@songs');
+
+Route::get('/songs', 'SongsController@all');
+Route::get('/songs/{id}', 'SongsController@show');
+Route::post('/songs', 'SongsController@store');
+Route::put('/songs/{id}', 'SongsController@update');
+Route::delete('/songs/{id}', 'SongsController@destroy');
