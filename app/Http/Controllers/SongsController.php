@@ -92,12 +92,12 @@ class SongsController extends Controller
     {
         $song = Song::find($id);
         
-        Log::info('before: '. $song);
+        //Log::info('before: '. $song);
         
-        $song->fill($request->all());
+        $song->update($request->all());
         $success = $song->save();
         
-        Log::info('after: '. $song);
+        //Log::info('after: '. $song);
         
 		if($success){
 			return \Response::json(
