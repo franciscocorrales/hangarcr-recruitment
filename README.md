@@ -17,11 +17,11 @@ Valid Content-Type:
 
 Verb  | Path | Action | Route Name
 ------------- | ------------- | ------------- | -------------
-GET  | /api/v1/songs  | index  | songs.index 
-GET  | /api/v1/songs/{id}  | show  | songs.show
-POST  | /api/v1/songs  | store  | songs.store
-PUT  | /api/v1/songs/{id}  | update  | songs.update
-DELETE  | /api/v1/songs/{id}  | destroy  | songs.destroy
+GET  | /api/songs  | index  | songs.index 
+GET  | /api/songs/{id}  | show  | songs.show
+POST  | /api/songs  | store  | songs.store
+PUT  | /api/songs/{id}  | update  | songs.update
+DELETE  | /api/songs/{id}  | destroy  | songs.destroy
 
 
 ##Time Spent:##
