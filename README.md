@@ -5,22 +5,24 @@
 ##How to use it:##
 
 Server URL: 
+https://hangarlaravel.herokuapp.com/
 
 
 ###Actions Handled###
 
-Verb	Path	Action	Route Name
-GET	/songs	index	songs.index
-GET	/songs/create	create	songs.create
-POST	/songs	store	songs.store
-GET	/songs/{songs}	show	songs.show
-GET	/songs/{songs}/edit	edit	songs.edit
-PUT/PATCH	/songs/{songs}	update	songs.update
-DELETE	/songs/{songs}	destroy	songs.destroy
+Verb  | Path | Action | Route Name
+------------- | ------------- | ------------- | -------------
+GET  | /songs  | index  | songs.index 
+GET  | /songs/create  | create   | songs.create
+POST  | /songs  | store  | songs.store
+GET  | /songs/{songs}  | show  | songs.show
+GET  | /songs/{songs}/edit  | edit  | songs.edit
+PUT/PATCH  | /songs/{songs}  | update  | songs.update
+DELETE  | /songs/{songs}  | destroy  | songs.destroy
 
 Remember, since HTML forms can't make PUT, PATCH, or DELETE requests, you will need to add a hidden _method field to spoof these HTTP verbs:
 
-<input type="hidden" name="_method" value="PUT">
+`<input type="hidden" name="_method" value="PUT">`
 
 
 
