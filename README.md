@@ -46,7 +46,7 @@ updated_at  | date  | No  | Yes
  * Set Models, Controllers, Database, Seeders	- 4 hours
  * RESTful API
   * CRUD - 2  hours
-  * Validation - not yet
+  * Validation - 0.5 hours
   * Auth - not yet
  * Extras
   * Spotify Preview - 0.5 hours
