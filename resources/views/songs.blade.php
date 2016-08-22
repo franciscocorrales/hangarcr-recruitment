@@ -49,6 +49,10 @@
 				margin-bottom: 16px;
 				border-bottom: 1px black solid;
 			}
+			
+			.preview{
+				text-align: center;
+			}
         </style>
     </head>
     <body>
@@ -73,6 +77,9 @@
 								<div><label>albumname:</label><p>{{$song['attributes']['albumname']}}</p></div>
 								<div><label>created_at:</label><p>{{$song['attributes']['created_at']}}</p></div>
 								<div><label>updated_at:</label><p>{{$song['attributes']['updated_at']}}</p></div>
+								<div class="preview">
+									<iframe src="https://embed.spotify.com/?uri={{$song['attributes']['url']}}" width="300" height="80" frameborder="0" allowtransparency="true"></iframe>
+								</div>
 							</div>
 						@endforeach
 						
