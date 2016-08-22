@@ -90,7 +90,21 @@ class SongsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $song = Song::find($id);
+        
+        $song->fill($request->all());
+        $success = $song->save();
+        
+		if($success){
+			return \Response::json(
+				array(
+					'success' => true,
+					'song'=> $song->toArray()
+			));
+		}
+		
+		return \Response::json(array('error'=> 400, 'message'=> 'Bad request'), 400);
+        
     }
 
     /**
