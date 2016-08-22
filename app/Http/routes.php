@@ -23,6 +23,7 @@ $api->version('v1', function ($api) {
 
 Route::get('/', 'SongsController@index');
 
+/*Old version, made without plugins*/
 Route::get('/api/v0/songs', 'SongsController@all');
 Route::get('/api/v0/songs/{id}', 'SongsController@show');
 Route::post('/api/v0/songs', 'SongsController@store');

@@ -33,6 +33,7 @@ DELETE  | /api/songs/{id}  | destroy  | songs.destroy
   * Auth - not yet
  * Extras
   * Spotify Preview - 0.5 hours
+  * Dingo - 3 hours
 
 ##Notes:##
  * The songs ids were not unique. So some are changed to maintain *id* as the unique identifier. 
