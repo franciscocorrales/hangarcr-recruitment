@@ -23,12 +23,16 @@ class SongsController extends Controller
     
     public function all(){
 		
-		$data = Song::all();
+		$songs = Song::all();
+		
+		if(is_null($songs)){
+			return \Response::json([ 'error': 404, 'message': 'Not found' ], 404);
+		}
 		
 		return \Response::json(
 			array(
 				'success' => true,
-				'songs'=> $data->toArray()
+				'songs'=> $songs->toArray()
 		));
 	}
         
@@ -51,7 +55,17 @@ class SongsController extends Controller
      */
     public function show($id)
     {
-        //
+		$song = Song::find($id);
+		
+		if(is_null($song)){
+			return \Response::json([ 'error': 404, 'message': 'Not found' ], 404);
+		}
+		
+        return \Response::json(
+			array(
+				'success' => true,
+				'song'=> $song->toArray()
+		));
     }
 
     /**
