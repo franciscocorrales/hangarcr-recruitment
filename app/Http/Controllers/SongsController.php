@@ -57,14 +57,13 @@ class SongsController extends Controller
      */
     public function index()
     {
-		$songs = $this->getJSONSongs();
 		$songs = Song::all();
         return view('songs', compact('songs'));
     }
     
     public function songs()
     {
-		$songs = $this->getJSONSongs();
+		$songs = Song::all();
         return view('songs', compact('songs'));
     }
 
