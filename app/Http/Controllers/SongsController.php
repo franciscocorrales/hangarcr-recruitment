@@ -18,16 +18,9 @@ class SongsController extends BaseController
     public function all(){
 		
 		$songs = Song::all();
-		
-		if(is_null($songs)){
-			return \Response::json(array('error'=> 404, 'message'=> 'Not found'), 404);
-		}
-		
-		return \Response::json(
-			array(
-				'success' => true,
-				'songs'=> $songs->toArray()
-		));
+				
+		return $this->response->array($songs->toArray());
+
 	}
         
     /**
@@ -56,14 +49,10 @@ class SongsController extends BaseController
 		$song = Song::find($id);
 		
 		if(is_null($song)){
-			return \Response::json(array('error'=> 404, 'message'=> 'Not found'), 404);
+			return $this->response->errorNotFound();
 		}
 		
-        return \Response::json(
-			array(
-				'success' => true,
-				'song'=> $song->toArray()
-		));
+       return $this->response->array($song->toArray());
     }
 
     /**
@@ -78,12 +67,12 @@ class SongsController extends BaseController
         $song = Song::find($id);
         
         if(is_null($song)){
-			return \Response::json(array('error'=> 404, 'message'=> 'Not found'), 404);
+			return $this->response->errorNotFound();
 		}
                 
         $song->update($request->all());
-        $success = $song->save();
-         
+        $song->save();
+                 
 		return \Response::json(
 			array(
 				'success' => true,
@@ -102,15 +91,18 @@ class SongsController extends BaseController
     {
         $song = Song::find($id);
         
-        $success = $song->delete();
+        if(is_null($song)){
+			return $this->response->errorNotFound();
+		}
         
-		if($success){
+        
+		if($song->delete()){
 			return \Response::json(
 				array(
 					'success' => true
 			));
 		}
 		
-		return \Response::json(array('error'=> 400, 'message'=> 'Bad request'), 400);
+		return $this->response->errorBadRequest();
     }
 }
