@@ -50,7 +50,7 @@
 						
 						@foreach($songs as $song)
 							<pre>
-								{{ print_r($song)}}
+								{{ print_r($song['attributes'])}}
 							</pre>
 						@endforeach
 						

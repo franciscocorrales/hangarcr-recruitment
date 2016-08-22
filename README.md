@@ -30,6 +30,7 @@ Remember, since HTML forms can't make PUT, PATCH, or DELETE requests, you will n
 
 ##Time:##
  * Setup (Heroku, Laravel, Repository, Local)   - 3 hours
+ * Set Models, Controllers, Database, Seeders	- 3 hours
  * RESTful API
   * CRUD - 0  hours
   * Auth - 0  hours
