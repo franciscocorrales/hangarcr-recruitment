@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests;
-use App\Api\V1\Song;
+use App\Api\V1\Http\Song;
 
 
 
@@ -31,15 +31,13 @@ class SongsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-			$newSong = Song::create($request->all());
-			
-			return \Response::json(
-				array(
-					'success' => true,
-					'song'=> $newSong->toArray()
-			));    
+    public function store(Requests\StoreSongRequest $request)
+    {	
+		if (Song::Create($request->all())) {
+			return $this->response->created();
+		}
+
+		return $this->response->errorBadRequest();
     }
 
     /**
