@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Redirect;
 use Exception;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Auth\Access\AuthorizationException;
@@ -46,7 +47,7 @@ class Handler extends ExceptionHandler
     public function render($request, Exception $e)
     {
 		if($this->isHttpException($e)) {
-			Redirect::to("https://hangarlaravel.herokuapp.com/");
+			\Redirect::to("https://hangarlaravel.herokuapp.com/");
 		}
 		
         return parent::render($request, $e);
