@@ -10,6 +10,8 @@ use App\Song;
 
 class SongsController extends BaseController
 {	
+	public function index(){}
+	
     public function all(){
 		
 		$songs = Song::all();
