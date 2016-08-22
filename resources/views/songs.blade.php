@@ -47,6 +47,13 @@
 								<li>{{ print_r($song)}}</li>
 							@endforeach
 						</ul>
+						
+						@foreach($songs as $song)
+							<pre>
+								{{ print_r($song)}}
+							</pre>
+						@endforeach
+						
 					@endif
                 </div>
                 
