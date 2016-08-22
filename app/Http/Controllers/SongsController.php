@@ -91,14 +91,10 @@ class SongsController extends Controller
     public function update(Request $request, $id)
     {
         $song = Song::find($id);
-        
-        //Log::info('before: '. $song);
-        
+                
         $song->update($request->all());
         $success = $song->save();
-        
-        //Log::info('after: '. $song);
-        
+         
 		if($success){
 			return \Response::json(
 				array(
