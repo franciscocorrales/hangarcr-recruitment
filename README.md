@@ -31,6 +31,8 @@ DELETE  | /api/v1/songs/{id}  | destroy  | songs.destroy
   * CRUD - 2  hours
   * Validation - not yet
   * Auth - not yet
+ * Extras
+  * Spotify Preview - 0.5 hours
 
 ##Notes:##
  * The songs ids were not unique. So some are changed to maintain *id* as the unique identifier. 
