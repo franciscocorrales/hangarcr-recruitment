@@ -92,8 +92,11 @@ class SongsController extends Controller
     {
         $song = Song::find($id);
         
-        $song->fill($request->all());
-        $success = $song->save();
+       // $song->fill($request->all());
+        //$success = $song->save();
+        
+        $song->fill($request->all())->save();
+        //$success = $song->save();
         
 		if($success){
 			return \Response::json(

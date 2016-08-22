@@ -38,4 +38,5 @@ DELETE  | /api/v1/songs/{id}  | destroy  | songs.destroy
 ##References:##
  * https://devcenter.heroku.com/articles/getting-started-with-laravel
  * https://laracasts.com/series/laravel-5-fundamentals/
- * https://laravel.com/docs/5.2/controllers#restful-resource-controllers 
+ * https://laravel.com/docs/5.2/controllers#restful-resource-controllers
+ * https://laravel.com/docs/5.2/eloquent#insert-update-delete
