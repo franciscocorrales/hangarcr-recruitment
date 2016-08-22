@@ -115,6 +115,17 @@ class SongsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $song = Song::find($id);
+        
+        $success = $song->delete();
+        
+		if($success){
+			return \Response::json(
+				array(
+					'success' => true
+			));
+		}
+		
+		return \Response::json(array('error'=> 400, 'message'=> 'Bad request'), 400);
     }
 }
