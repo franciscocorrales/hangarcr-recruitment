@@ -30,6 +30,11 @@
             .title {
                 font-size: 40px;
             }
+            
+            .songs{
+				text-align: left;
+			}
+			
         </style>
     </head>
     <body>
@@ -39,14 +44,9 @@
                 <p>Complete information on the API's usage:</p>
                 <a href="https://github.com/franciscocorrales/hangarcr-recruitment">https://github.com/franciscocorrales/hangarcr-recruitment</a>
                 
-                <div>
+                <div class="songs">
 					@if( null != $songs  &&  count($songs) )
 						<h1>Songs currently on the API:</h1>
-						<ul>
-							@foreach($songs as $song)
-								<li>{{ print_r($song)}}</li>
-							@endforeach
-						</ul>
 						
 						@foreach($songs as $song)
 							<pre>
