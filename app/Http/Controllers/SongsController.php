@@ -44,7 +44,7 @@ class SongsController extends Controller
      */
     public function store(Request $request)
     {
-        $newSong = Song::create($request);
+        $newSong = Song::create(array($request));
         
         return \Response::json(
 			array(
