@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -16,16 +16,5 @@ class Song extends Model
     protected $fillable = [
         'url', 'songname', 'artistid', 'artistname','albumid','albumname'
     ];
-    
-    
-    
-    /* input requirements */
-    public static $rules = [
-                            'url'        => 'required',
-                            'songname'      => 'required',
-                            'artistid' => 'required',
-                            'artistname'      => 'required',
-                            'albumid'      => 'required',
-                            'albumname'      => 'required'
-                           ];
+
 }

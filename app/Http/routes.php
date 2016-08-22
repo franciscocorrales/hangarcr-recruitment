@@ -23,11 +23,4 @@ $api->version('v1', function ($api) {
 
 Route::get('/', 'SongsController@index');
 
-/*Old version, made without plugins*/
-Route::get('/api/v0/songs', 'SongsController@all');
-Route::get('/api/v0/songs/{id}', 'SongsController@show');
-Route::post('/api/v0/songs', 'SongsController@store');
-Route::put('/api/v0/songs/{id}', 'SongsController@update');
-Route::delete('/api/v0/songs/{id}', 'SongsController@destroy');
-
 Route::any('/{any}', 'SongsController@index')->where('any', '.*');
