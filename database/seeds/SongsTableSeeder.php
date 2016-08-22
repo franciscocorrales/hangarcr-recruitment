@@ -6,7 +6,7 @@ class SongsTableSeeder extends Seeder {
     {
         DB::table('songs')->delete();
  
-        User::create(array(
+        Song::create(array(
 			'id' => 2547919',
             'url' => 'spotify:track:3qfz9wig4gcrb4bimw9ov7',
             'songname' => 'johnny b. goode',
@@ -16,7 +16,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'roll over beethoven'
         ));
                 
-        User::create(array(
+        Song::create(array(
 			'id' => 881558,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'moonlight sonata',
@@ -26,7 +26,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'beethoven piano sona'
         ));
         
-         User::create(array(
+         Song::create(array(
 			'id' => 8815586,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'twist and shout',
@@ -36,7 +36,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'beatles'
         ));
         
-         User::create(array(
+         Song::create(array(
 			'id' => 8815587,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'i saw her standing there',
@@ -46,7 +46,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'beatles'
         ));
         
-         User::create(array(
+         Song::create(array(
 			'id' => 8815588,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'here comes the sun',
@@ -56,7 +56,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'beatles'
         ));
                 
-         User::create(array(
+         Song::create(array(
 			'id' => 8815589,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'hey jude',
@@ -66,7 +66,7 @@ class SongsTableSeeder extends Seeder {
             'albumname' => 'beatle'
         ));
         
-        User::create(array(
+        Song::create(array(
 			'id' => 8815590,
             'url' => 'spotify:track:7linrtr5px7i3r96mducjw',
             'songname' => 'helter skelter',
