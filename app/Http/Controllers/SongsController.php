@@ -23,7 +23,7 @@ class SongsController extends Controller
     
     public function all(){
 		
-		$data = Song:all();
+		$data = Song::all();
 		
 		return Response::json(
 			array(
