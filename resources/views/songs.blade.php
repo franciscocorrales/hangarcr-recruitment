@@ -46,7 +46,8 @@
 			}
 			
 			.songs .song{
-				margin-bottom: 12px;
+				margin-bottom: 16px;
+				border-bottom: 1px black solid;
 			}
         </style>
     </head>
