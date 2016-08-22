@@ -8,7 +8,7 @@ use App\Song;
 
 
 
-class SongsController extends Controller
+class SongsController extends BaseController
 {	
     public function all(){
 		
