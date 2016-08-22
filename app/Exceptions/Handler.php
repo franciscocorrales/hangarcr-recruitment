@@ -49,7 +49,8 @@ class Handler extends ExceptionHandler
 		if($this->isHttpException($e)) {
 			\Redirect::to("https://hangarlaravel.herokuapp.com/");
 		}
-		
-        return parent::render($request, $e);
+		else{
+			return parent::render($request, $e);
+		}
     }
 }
