@@ -26,7 +26,7 @@ class SongsController extends Controller
 		$songs = Song::all();
 		
 		if(is_null($songs)){
-			return response()->json([ 'error': 404, 'message': 'Not found'], 404);
+			return \Response::json(array('error'=> 404, 'message'=> 'Not found'), 404);
 		}
 		
 		return \Response::json(
@@ -58,7 +58,7 @@ class SongsController extends Controller
 		$song = Song::find($id);
 		
 		if(is_null($song)){
-			return response()->json([ 'error': 404, 'message': 'Not found' ], 404);
+			return \Response::json(array('error'=> 404, 'message'=> 'Not found'), 404);
 		}
 		
         return \Response::json(
