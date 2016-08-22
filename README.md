@@ -28,9 +28,9 @@ DELETE  | /api/v1/songs/{id}  | destroy  | songs.destroy
  * Setup (Heroku, Laravel, Repository, Local)   - 3 hours
  * Set Models, Controllers, Database, Seeders	- 4 hours
  * RESTful API
-  * CRUD - 0  hours
-  * Auth - 0  hours
-  * Database - 0  hours
+  * CRUD - 2  hours
+  * Validation - not yet
+  * Auth - not yet
 
 ##Notes:##
  * The songs ids were not unique. So some are changed to maintain *id* as the unique identifier. 
