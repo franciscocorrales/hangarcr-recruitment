@@ -47,9 +47,15 @@
 						<h1>Songs currently on the API:</h1>
 						
 						@foreach($songs as $song)
-							<pre>
-								{{ print_r($song['attributes'])}}
-							</pre>
+							<label>id:</label><p>{{$song['attributes']['id']}}</p>
+							<label>url:</label><p>{{$song['attributes']['url']}}</p>
+							<label>songname:</label><p>{{$song['attributes']['songname']}}</p>
+							<label>artistid:</label><p>{{$song['attributes']['artistid']}}</p>
+							<label>artistname:</label><p>{{$song['attributes']['artistname']}}</p>
+							<label>albumid:</label><p>{{$song['attributes']['albumid']}}</p>
+							<label>albumname:</label><p>{{$song['attributes']['albumname']}}</p>
+							<label>created_at:</label><p>{{$song['attributes']['created_at']}}</p>
+							<label>updated_at:</label><p>{{$song['attributes']['updated_at']}}</p>
 						@endforeach
 						
 					@endif
