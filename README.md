@@ -10,7 +10,7 @@ Francisco Corrales Morales
 Server URL: 
 https://hangarlaravel.herokuapp.com/
 
-Valid Content-Type:
+###Valid Content-Type:###
  * application/x-www-form-urlencoded
  * multipart/form-data
  * application/json
