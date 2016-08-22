@@ -19,4 +19,4 @@ Route::post('/api/v1/songs', 'SongsController@store');
 Route::put('/api/v1/songs/{id}', 'SongsController@update');
 Route::delete('/api/v1/songs/{id}', 'SongsController@destroy');
 
-Route::get('/*', 'SongsController@index');
+Route::any('/{any}', 'SongsController@index');
