@@ -3,12 +3,14 @@
     <head>
         <title>Francisco Corrales - Laravel Test - Hangar </title>
 
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
         <style>
             html, body {
                 height: 100%;
             }
 
             body {
+				font-family: 'Raleway', sans-serif;
                 margin: 0;
                 padding: 0;
                 width: 100%;
@@ -27,8 +29,11 @@
 
             .title {
                 font-size: 40px;
+                margin: 20px;
             }
-            
+            h1{
+				font-weight: normal;
+			}
             .songs{
 				text-align: left;
 			}
@@ -46,7 +51,7 @@
 			}
 			
 			.songs .song{
-				margin-bottom: 16px;
+				margin-bottom: 35px;
 				border-bottom: 1px black solid;
 			}
 			
@@ -59,7 +64,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Songs API</div>
-                <p>Complete information on the API's usage:</p>
+                <p style="text-align: left;">Complete information on the API's usage:</p>
                 <a href="https://github.com/franciscocorrales/hangarcr-recruitment">https://github.com/franciscocorrales/hangarcr-recruitment</a>
                 
                 <div class="songs">
