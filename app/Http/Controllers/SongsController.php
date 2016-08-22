@@ -44,13 +44,20 @@ class SongsController extends Controller
      */
     public function store(Request $request)
     {
-        $newSong = Song::create($request->all());
+		try{
+			$newSong = Song::create($request->all());
+			
+			return \Response::json(
+				array(
+					'success' => true,
+					'song'=> $newSong->toArray()
+			));
+        }
+        catch (Exception $e){
+			return \Response::json(array('error'=> 400, 'message'=> 'Bad request'), 400);
+		}
         
-        return \Response::json(
-			array(
-				'success' => true,
-				'song'=> $newSong->toArray()
-		));
+
     }
 
     /**
