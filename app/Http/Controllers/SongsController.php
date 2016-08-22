@@ -6,15 +6,22 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Song;
 
-
-
 class SongsController extends BaseController
 {	
+	/*
+	 * Our Main page 
+	 * 
+	 */
 	public function index(){
 		$songs = Song::all();
 		return view('songs', compact('songs'));
 	}
 	
+	
+	/**
+	 * All songs in the database.
+	 * 
+	 */
     public function all(){
 		
 		$songs = Song::all();
@@ -94,7 +101,6 @@ class SongsController extends BaseController
         if(is_null($song)){
 			return $this->response->errorNotFound();
 		}
-        
         
 		if($song->delete()){
 			return \Response::json(
