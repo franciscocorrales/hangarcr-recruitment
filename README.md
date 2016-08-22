@@ -12,11 +12,11 @@ https://hangarlaravel.herokuapp.com/
 
 Verb  | Path | Action | Route Name
 ------------- | ------------- | ------------- | -------------
-GET  | /songs  | index  | songs.index 
-GET  | /songs/{id}  | show  | songs.show
-POST  | /songs  | store  | songs.store
-PUT  | /songs/{id}  | update  | songs.update
-DELETE  | /songs/{id}  | destroy  | songs.destroy
+GET  | /api/v1/songs  | index  | songs.index 
+GET  | /api/v1/songs/{id}  | show  | songs.show
+POST  | /api/v1/songs  | store  | songs.store
+PUT  | /api/v1/songs/{id}  | update  | songs.update
+DELETE  | /api/v1/songs/{id}  | destroy  | songs.destroy
 
 
 ##Time Spent:##
