@@ -1,6 +1,7 @@
 <?php
  
 use Illuminate\Database\Seeder;
+use App\Song;
 
  
 class SongsTableSeeder extends Seeder {
@@ -10,7 +11,7 @@ class SongsTableSeeder extends Seeder {
         DB::table('songs')->delete();
  
         Song::create(array(
-			'id' => 2547919',
+			'id' => 2547919,
             'url' => 'spotify:track:3qfz9wig4gcrb4bimw9ov7',
             'songname' => 'johnny b. goode',
             'artistid' => 45,
