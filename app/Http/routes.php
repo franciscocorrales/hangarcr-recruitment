@@ -13,8 +13,8 @@
 
 Route::get('/', 'SongsController@index');
 
-Route::get('/songs', 'SongsController@all');
-Route::get('/songs/{id}', 'SongsController@show');
-Route::post('/songs', 'SongsController@store');
-Route::put('/songs/{id}', 'SongsController@update');
-Route::delete('/songs/{id}', 'SongsController@destroy');
+Route::get('/api/v1/songs', 'SongsController@all');
+Route::get('/api/v1/songs/{id}', 'SongsController@show');
+Route::post('/api/v1/songs', 'SongsController@store');
+Route::put('/api/v1/songs/{id}', 'SongsController@update');
+Route::delete('/api/v1/songs/{id}', 'SongsController@destroy');
