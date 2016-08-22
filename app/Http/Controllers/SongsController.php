@@ -27,8 +27,8 @@ class SongsController extends Controller
 		
 		return Response::json(
 			array(
-				'success'=>true,
-				'songs'= $data->toArray()
+				'success' => true,
+				'songs'=> $data->toArray()
 		));
 	}
         
