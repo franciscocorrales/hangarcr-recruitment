@@ -51,6 +51,7 @@ updated_at  | date  | No  | Yes
  * Extras
   * Spotify Preview - 0.5 hours
   * Dingo - 3.5 hours
+  * Test - not yet
 
 ##Notes:##
  * The songs ids were not unique. So some are changed to maintain *id* as the unique identifier. 
